@@ -58,8 +58,13 @@ $tasks = [
     ),
 ];
 
-Route::get('/', function () use ($tasks) {
+Route::get('/tasks', function () use ($tasks) {
     return view('index', [
         'tasks' => $tasks,
     ]);
-});
+})->name('tasks.index');
+
+
+Route::get('/tasks/{id}', function ($id) {
+    return 'One single task';
+})->name('tasks.show');
