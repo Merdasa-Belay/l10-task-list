@@ -4,6 +4,8 @@
 
 @section('content')
 
+    {{ $errors }}
+
     <form method="POST" action="{{ route('tasks.store') }}">
 
         @csrf
