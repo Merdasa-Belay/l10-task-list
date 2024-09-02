@@ -27,3 +27,4 @@ Route::get('/tasks/{id}', function ($id) {
 
     return view('show', ['task' =>  \App\Models\Task::findOrFail($id)]);
 })->name('tasks.show');
+Route::view('/tasks/create', 'create');
