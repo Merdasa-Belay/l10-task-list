@@ -67,7 +67,7 @@ Route::put('/tasks/{id}', function ($id, Request $request) {
         'long_description' => 'required'
 
     ]);
-    $task = Task::findOrFail('$id');
+    $task = Task::findOrFail($id);
     $task->title = $data['title'];
     $task->description = $data['description'];
     $task->long_description = $data['long_description'];
