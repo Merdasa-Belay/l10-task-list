@@ -24,7 +24,7 @@
         @csrf
         <div>
             <label for="title">Title</label>
-            <input type="text" name="title" id="title" value="{{ old('title') }}">
+            <input type="text" name="title" id="title" value="{{ old ('title') }}">
             {{-- error message --}}
             @error('title')
                 <p class="error-message">
