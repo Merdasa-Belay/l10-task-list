@@ -21,6 +21,16 @@
 
     </p>
     <div>
+        <form method="POST" action="{{ route('tasks.toggle-complete', ['task' => $task]) }}">
+
+            @csrf
+            @method('PUT')
+            <button type="submit">
+                Mark as {{ $task->completed ? 'not completed' : 'completed' }}
+            </button>
+        </form>
+    </div>
+    <div>
         <a href="{{ route('tasks.edit', ['task' => $task]) }}">edit</a>
     </div>
 
