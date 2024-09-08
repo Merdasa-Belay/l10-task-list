@@ -20,6 +20,13 @@
         {{ $task->updated_at }}
 
     </p>
+    <p>
+        @if ($task->completed)
+            completed
+        @else
+            Not completed
+        @endif
+    </p>
     <div>
         <form method="POST" action="{{ route('tasks.toggle-complete', ['task' => $task]) }}">
 
